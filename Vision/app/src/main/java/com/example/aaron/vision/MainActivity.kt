@@ -24,7 +24,6 @@ import java.io.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var imageContainsDogs = false
     private var bitmap:Bitmap? = null
     private var contentURI: Uri = Uri.EMPTY
     private var vision:Vision? = null
@@ -36,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         go_button.setOnClickListener {
             getAnImage()
             setDescription("Got the image")
+            pictureOfDogTextView.text = getString(R.string.default_dog)
         }
 
         ask.setOnClickListener {
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
                     msg += "\n"
                 }
                 msg += it       //"$desc\n"
-                if(msg.contains("Dog")){
+                if(msg.contains("Dog") || msg.contains("Canine") || msg.contains("Dog breed")){
                     pictureOfDogTextView.text = getString(R.string.dog)
                 } else {
                     pictureOfDogTextView.text = getString(R.string.no_dog)
@@ -149,10 +149,6 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG, "GVisionThread - labelList is null")
         }
         setDescription(msg)
-    }
-
-    private fun scanForDogs(){
-
     }
 
     /**

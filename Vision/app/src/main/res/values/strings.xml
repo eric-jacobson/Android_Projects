@@ -3,7 +3,7 @@
     <string name="retrieve">Get Image</string>
     <string name="decode">Scan</string>
     <string name="unknown">-- Unknown --</string>
-    <string name="default_dog">Select a picture to see if it has a dog!</string>
+    <string name="default_dog">Scan a picture to see if it has a dog!</string>
     <string name="dog">This is a picture of a dog!</string>
     <string name="no_dog">This is not a picture of a dog.</string>
 </resources>
