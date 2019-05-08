@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlashBeepShake</string>
+    <string name="action_settings">Settings</string>
+    <string name="flash_label">Flash</string>
+    <string name="beep_label">Beep</string>
+    <string name="vibrate_label">Vibrate</string>
+</resources>
