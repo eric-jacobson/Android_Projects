@@ -244,7 +244,7 @@ class MainActivity : AppCompatActivity() {
     fun readJsonStream(inStream: InputStream) {
         val isr = InputStreamReader(inStream,"UTF-8")
         val reader = JsonReader(isr)
-        readDescriptionArray(reader);
+        readDescriptionArray(reader)
     }
 
     @Throws(IOException::class)
